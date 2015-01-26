@@ -12,10 +12,10 @@ public class Dwarf {
     List<String> firstnameList = Arrays.asList("Thor", "Bjorn", "Lauger", "Ovur", "Varin", "Maof", "Garandas", "Vonthic", "Kilar", "Darnar", "Dwalbar", "Sundkas", "Garn", "Burgan", "Buror", "Donulf");
     List<String> lastnamePrefixList = Arrays.asList("Oak", "Frost", "Thunder", "Fire", "Ground", "Iron", "Stone", "Sword", "Blood", "Red", "Anvil", "Gray", "Foe", "Strong", "Troll", "Orc", "Serpent", "Snake");
     List<String> lastnameSuffixList = Arrays.asList("shield", "rock", "heart", "hammer", "forger", "shadow", "breaker", "beard", "axe", "fist", "bane", "caster", "crusher", "eye", "mind");
-    List<String> likesDislikesList = Arrays.asList("insects", "fruits", "death", "animals", "swords", "legendary folklore", "elves", "getting drunk", "ale", "punishing rocks", "fighting", "birds", "shiny things", "torture", "nails", "sharp things", "holidays", "ugliness", "beautiful dwarves", "fish", "magic", "sorcerers", "undead things", "dungeon crawling", "looting", "raiding");
+    List<String> likesDislikesList = Arrays.asList("goblins", "dragons", "spiders", "insects", "fruits", "death", "animals", "swords", "legendary folklore", "elves", "drunkness", "ale", "rock punishing", "fighting", "birds", "shiny things", "torture", "nails", "sharp things", "holidays", "ugliness", "beautiful dwarves", "fish", "magic", "sorcerers", "undead things", "dungeon crawling", "looting", "raiding", "loud noises", "dark and wet places", "spirits of his ancestors", "high places", "snow", "mining");
     List<String> cityList = Arrays.asList("Gorndarum", "Birnkahldur", "Hig Faldir", "Bhom Buldor", "Haggrim", "Dugbihr", "Gol Durahl", "Bhogh Darohm", "Thoghbuldahr", "Veglodahr", "Kan Taruhm", "Ham Darul", "Vern Darim");
-    List<String> deityList = Arrays.asList("Cuvther, Goddes of Fertility", "Mueyr, God of Ale", "Qoldur, God of Poetry", "Juxorr, Goddes of Mercy", "Durlo, God of Good Luck", "Kidorr, God of Earth", "Nutdon, God of Fire", "Wyeyar, God of Night", "Emaos, God of the Underworld", "Jidite, God of Revenge");
-    List<String> weaponList = Arrays.asList("a sword", "a greathammer", "a dagger", "a bow", "a crossbow", "a hammer", "a bastard sword", "a rock", "a thigh bone", "another dwarf", "a chair", "any small animal");
+    List<String> deityList = Arrays.asList("Cuvther, The Goddes of Fertility", "Mueyr, The God of Ale", "Qoldur, The God of Poetry", "Juxorr, The Goddes of Mercy", "Durlo, The God of Good Luck", "Kidorr, The God of Earth", "Nutdon, The God of Fire", "Wyeyar, The God of Night", "Emaos, The God of the Underworld", "Jidite, The God of Revenge");
+    List<String> weaponList = Arrays.asList("Sword", "Greathammer", "Dagger", "Bow", "Crossbow", "Hammer", "Bastard sword", "Rock", "Thigh bone", "Another dwarf", "Chair", "Any small animal", "Sharp stick", "Slingshot");
     String firstname;
     String lastname;
     String lastnamePrefix;
@@ -88,7 +88,7 @@ public class Dwarf {
         return this.birthYear;
     }
     public int getAge() {
-        this.age = 1500 - this.birthYear;
+        this.age = this.currentYear - this.birthYear;
         return this.age;
     }
     public int getStats() {

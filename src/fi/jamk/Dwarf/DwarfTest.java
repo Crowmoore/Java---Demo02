@@ -8,20 +8,20 @@ import java.util.ArrayList;
  */
 
 public class DwarfTest {
- 
+     
     public static void main(String args[]) {
         
-        ArrayList<Dwarf> dwarves = new ArrayList<Dwarf>();
+        ArrayList<Dwarf> dwarfList = new ArrayList<>();
         Scanner input = new Scanner(System.in);
-        System.out.print("How many dwarves would you like to generate? ");
+        System.out.print("How many dwarfs would you like to generate? ");
         int dwarfCount = input.nextInt();
         for (int i=0; i<dwarfCount; i++) {
             Dwarf dwarf = newDwarf();
-            dwarves.add(dwarf);
+            dwarfList.add(dwarf);
         }
         for (int i=0; i<dwarfCount; i++) {
-            System.out.println("");
-            printDwarfInfo(dwarves.get(i));
+            System.out.print("\n");
+            printDwarfInfo(dwarfList.get(i));
         }         
     }
     public static Dwarf newDwarf() {
@@ -72,11 +72,11 @@ public class DwarfTest {
     
     public static void printDwarfInfo(Dwarf dwarf) {
         System.out.println(dwarf.firstname + " " + dwarf.lastname + ", " + dwarf.age + ".");
-        System.out.println("Born in the great city of " + dwarf.city + " in the year " + dwarf.birthYear + ".");
-        System.out.println("Likes " + dwarf.firstLike + " and " + dwarf.secondLike + ". Dislikes " + dwarf.dislike + ". \n"
-        + "Absolutely loves " + dwarf.absoluteLove + " and hates " + dwarf.absoluteHate + ".");
-        System.out.println("Favourite weapon is " + dwarf.weapon + ".");
-        System.out.println("Worships " + dwarf.deity + ".");
+        System.out.println("He was born in the great city of " + dwarf.city + " in the year " + dwarf.birthYear + ".");
+        System.out.println("His warm feelings towards " + dwarf.firstLike + " and " + dwarf.secondLike + " are widely known. He simply cannot comprehend " + dwarf.dislike + ".");
+        System.out.println("His most beloved thing in the whole world is " + dwarf.absoluteLove + " and he despises " + dwarf.absoluteHate + ".");
+        System.out.println(dwarf.weapon + " is a weapon of choice for " + dwarf.firstname + ". He never leaves the city without one.");
+        System.out.println("He worships a deity known as " + dwarf.deity + ", whom he honors daily.");
         System.out.println("Strength: " + dwarf.strength + "\n" + "Intellect: " + dwarf.intellect + "\n"
         + "Wisdom: " + dwarf.wisdom + "\n" + "Dexterity: " + dwarf.dexterity);
     }
